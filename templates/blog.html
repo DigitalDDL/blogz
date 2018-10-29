@@ -1,18 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1><a href = "http://127.0.0.1:5000/create_post</a></h1>
 
 <center><h2>{{blog.title}}</h2></center>
 <center><p>{{blog.body}}</p></center>
 
-<ul>
-    {% for blog in blogs %}
-    <h2><a href="/blog?id={{blog.id}}">{{blog.title}}</a></h2>
-    <p>{{blog.body}}</p>
-    <hr />
-    {% endfor %}
-</ul>
 
 
 {% endblock %}
