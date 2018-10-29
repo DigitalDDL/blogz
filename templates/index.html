@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Build a Blog</h1>
+    <hr />
+    {% if blogs|length == 0 %}
+    <p>No Blogs yet</p>
+    {% else %}
+        
+        <ul>
+            {% for blog in blogs %}
+            <h2><a href="/http://127.0.0.1:5000/create_post"</a></a></h2>
+            <h2><a href="/blog?id={{blog.id}}">{{blog.title}}</a></h2>
+            <p>{{blog.body}}</p>
+            <hr />
+            {% endfor %}
+        </ul>
+
+    {% endif %}
+
+{% endblock %}
